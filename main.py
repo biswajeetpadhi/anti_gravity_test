@@ -22,11 +22,19 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-# Mount static files
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# Get absolute path to the directory containing main.py
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(BASE_DIR, "static")
+TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
-# Templates
-templates = Jinja2Templates(directory="templates")
+# Mount static files with absolute path
+if os.path.exists(STATIC_DIR):
+    app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+else:
+    print(f"Warning: Static directory not found at {STATIC_DIR}")
+
+# Templates with absolute path
+templates = Jinja2Templates(directory=TEMPLATES_DIR)
 
 # --- Pydantic Models ---
 class TaskSchema(BaseModel):
