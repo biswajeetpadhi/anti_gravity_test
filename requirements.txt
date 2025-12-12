@@ -1,4 +1,5 @@
 -i https://pypi.org/simple
+a2wsgi==1.10.10; python_full_version >= '3.8.0'
 aiofiles==25.1.0; python_version >= '3.9'
 aiosqlite==0.21.0; python_version >= '3.9'
 annotated-doc==0.0.4; python_version >= '3.8'

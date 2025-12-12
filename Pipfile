@@ -12,6 +12,7 @@ aiofiles = "*"
 sqlalchemy = "*"
 aiosqlite = "*"
 greenlet = "*"
+a2wsgi = "*"
 
 [dev-packages]
 
