@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+pydantic = "*"
+jinja2 = "*"
+aiofiles = "*"
+sqlalchemy = "*"
+aiosqlite = "*"
+greenlet = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"

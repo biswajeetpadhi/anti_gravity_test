@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic To-Do</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+    <div class="background-blur"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Cosmic Tasks</h1>
+            <p class="subtitle">Stay organized, stay stellar.</p>
+        </header>
+
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="What's your next mission?" autocomplete="off" />
+            <button class="add-btn" onclick="addTask()" aria-label="Add task">+</button>
+        </div>
+
+        <ul id="taskList">
+            <!-- Tasks will appear here -->
+        </ul>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
